@@ -1,0 +1,116 @@
+/* General Container Styling */
+.login-container {
+    -fx-padding: 20;
+    -fx-spacing: 20;
+    -fx-alignment: center;
+    -fx-background-color: #f0f4f8; /* Light background */
+}
+
+/* Styling the form */
+.login-form {
+    -fx-background-color: #ffffff; /* White background */
+    -fx-border-radius: 10;
+    -fx-padding: 20;
+    -fx-spacing: 15;
+    -fx-alignment: center;
+    -fx-pref-width: 100%;
+    -fx-min-width: 300;
+    -fx-max-width: 450; /* Limit maximum width */
+    -fx-effect: dropshadow(gaussian, #b0bec5, 10, 0.9, 0, 2); /* Soft shadow for depth */
+}
+
+/* Styling for the username and password labels */
+.label {
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #333333; /* Dark grey text */
+}
+
+/* Styling for the input fields */
+.text-field, .password-field {
+    -fx-pref-width: 100%;
+    -fx-min-width: 250;
+    -fx-max-width: 100%; /* Ensure the input field stretches with width */
+    -fx-padding: 10px;
+    -fx-background-color: #f0f4f8; /* Light background for fields */
+    -fx-border: 1px solid #ccc; /* Light border */
+    -fx-border-radius: 5px; /* Rounded corners */
+    -fx-font-size: 14px;
+    -fx-text-fill: #333; /* Dark text */
+}
+
+/* Focus style for input fields */
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #4CAF50; /* Green border on focus */
+    -fx-background-color: #ffffff; /* White background when focused */
+    -fx-effect: dropshadow(gaussian, #4CAF50, 5, 0.8, 0, 2); /* Green shadow */
+}
+
+/* Button styling */
+.button {
+    -fx-pref-width: 100%; /* Ensure button stretches to 100% width of parent container */
+    -fx-min-width: 250;
+    -fx-max-width: 400; /* Limit button width */
+    -fx-padding: 12px;
+    -fx-background-color: #4CAF50; /* Green background */
+    -fx-text-fill: white; /* White text */
+    -fx-border-radius: 5px;
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+    -fx-cursor: hand; /* Pointer cursor */
+    -fx-transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Button hover effect */
+.button:hover {
+    -fx-background-color: #45a049; /* Darker green on hover */
+    -fx-effect: dropshadow(gaussian, #388e3c, 10, 0.7, 0, 2); /* Green shadow on hover */
+}
+
+/* Button focus effect */
+.button:focused {
+    -fx-background-color: #388e3c; /* Dark green when focused */
+    -fx-effect: dropshadow(gaussian, #2e7d32, 5, 0.8, 0, 2);
+}
+
+/* Image responsive styling */
+.login-image {
+    -fx-max-width: 100%;
+    -fx-max-height: 100%;
+    -fx-preserve-ratio: true;
+    -fx-fit-width: 250;
+    -fx-fit-height: 250;
+}
+
+/* Responsive Design for Small Screens */
+@media screen and (max-width: 600px) {
+    .login-form {
+        -fx-padding: 15;
+        -fx-spacing: 10;
+    }
+
+    .button {
+        -fx-padding: 10px;
+        -fx-font-size: 14px;
+    }
+
+    .text-field, .password-field {
+        -fx-font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .login-form {
+        -fx-padding: 10;
+        -fx-spacing: 8;
+    }
+
+    .button {
+        -fx-padding: 8px;
+        -fx-font-size: 12px;
+    }
+
+    .text-field, .password-field {
+        -fx-font-size: 14px;
+    }
+}
